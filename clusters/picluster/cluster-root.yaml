@@ -13,5 +13,8 @@ spec:
   wait: true
   prune: true
   commonMetadata:
-    labels:
-      gitops: flux
+    labels: { gitops: flux }
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
