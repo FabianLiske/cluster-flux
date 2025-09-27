@@ -4,3 +4,4 @@ resources:
   - ./svc-stirling
   - ./svc-trilium
   - ./svc-kochen
+  - ./svc-ddns
