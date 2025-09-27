@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - ./svc-stirling
   - ./svc-trilium
+  - ./svc-kochen
