@@ -1,0 +1,6 @@
+creation_rules:
+  - path_regex: 'apps/.*/(secret|secrets|.*-secret)\.ya?ml'
+    encrypted_regex: '^(data|stringData)$'
+    age:
+      - age18zt3nnfmvqptym5k79vknf9mxzkwwfzcpgct2wkfma02mjpxwpmszrf8q9
+      # - age1DEIN_PERSOENLICHER_PUBLIC_KEY
