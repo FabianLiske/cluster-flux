@@ -12,7 +12,6 @@ spec:
     spec:
       containers:
         - name: trilium
-          # Tipp: Fixe Version statt latest, z.B.: zadam/trilium:0.63.6
           image: zadam/trilium:latest
           imagePullPolicy: IfNotPresent
           securityContext:
@@ -46,4 +45,5 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: trilium-data   # bindet die bestehende PVC wieder ein
+            claimName: trilium-data
+            

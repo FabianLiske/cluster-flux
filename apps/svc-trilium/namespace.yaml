@@ -4,3 +4,4 @@ metadata:
   name: svc-trilium
   labels:
     gitops: flux
+    
