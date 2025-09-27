@@ -7,8 +7,7 @@ labels:
       gitops: flux
 resources:
   - namespace.yaml
+  - pvc.yaml
   - deployment.yaml
   - service.yaml
   - ingress.yaml
-  - pvc.yaml
-  
