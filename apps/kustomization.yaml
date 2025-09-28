@@ -5,9 +5,6 @@ resources:
   - ./infra/metallb
   - ./infra/metallb/metallb-helm.kustomization.yaml
   - ./infra/metallb/metallb-config.kustomization.yaml
-  - ./infra/longhorn
-  - ./infra/longhorn/longhorn-helm.kustomization.yaml
-  - ./infra/longhorn/longhorn-config.kustomization.yaml
   - ./svc-stirling
   - ./svc-trilium
   - ./svc-kochen
