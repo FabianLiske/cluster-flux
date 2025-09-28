@@ -3,6 +3,8 @@ kind: Kustomization
 resources:
   - ./infra/cert-manager
   - ./infra/metallb
+  - ./infra/metallb/metallb-helm.kustomization.yaml
+  - ./infra/metallb/metallb-config.kustomization.yaml
   - ./svc-stirling
   - ./svc-trilium
   - ./svc-kochen
