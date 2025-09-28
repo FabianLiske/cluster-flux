@@ -17,7 +17,7 @@ spec:
         seccompProfile: { type: RuntimeDefault }
       containers:
         - name: ddns
-          image: favonia/cloudflare-ddns:latest   # besser: Tag od. Digest pinnen
+          image: favonia/cloudflare-ddns:latest
           imagePullPolicy: IfNotPresent
           securityContext:
             runAsUser: 1000
@@ -34,7 +34,7 @@ spec:
             - name: DOMAINS
               value: "vpn.rohrbom.be,vault.rohrbom.be,kochen.mitschen.de"
             - name: PROXIED
-              value: "false"   # wie bisher (kann auf true falls gewollt)
+              value: "false"
           volumeMounts:
             - { name: tmp, mountPath: /tmp }
           resources:
