@@ -4,9 +4,13 @@ metadata:
   name: longhorn-config
   namespace: flux-system
 spec:
+  dependsOn:
+    - name: longhorn-helm
   interval: 10m
   path: ./apps/infra/longhorn/extras
   prune: true
   wait: true
-  dependsOn:
-    - name: longhorn-helm
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system

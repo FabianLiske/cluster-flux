@@ -9,6 +9,10 @@ spec:
   prune: true
   wait: true
   targetNamespace: longhorn-system
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
   commonMetadata:
     labels: { app: longhorn }
   dependsOn: []
@@ -20,3 +24,17 @@ spec:
         - op: add
           path: /spec/install/disableWait
           value: false
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: DaemonSet
+      name: longhorn-manager
+      namespace: longhorn-system
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: longhorn-admission-webhook
+      namespace: longhorn-system
+    - apiVersion: v1
+      kind: Service
+      name: longhorn-admission-webhook
+      namespace: longhorn-system
+

@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: longhorn
-      version: 1.6.2   # <- bitte fixieren, nicht latest
+      version: 1.6.2
       sourceRef:
         kind: HelmRepository
         name: longhorn
@@ -17,7 +17,9 @@ spec:
   install:
     remediation:
       retries: 3
+      crds: Create
   upgrade:
     remediation:
       retries: 3
+      crds: Create
   values: {}
